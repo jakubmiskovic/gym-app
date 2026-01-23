@@ -16,16 +16,16 @@ import {
   listReminders,
   Reminder,
   updateReminder,
-} from '../db/database';
+} from '../../db/database';
 import {
   cancelScheduledNotifications,
   requestNotificationPermissions,
   scheduleReminderNotifications,
-} from '../utils/notifications';
+} from '../../utils/notifications';
 
 const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
-export default function SettingsScreen() {
+export default function NotificationsSettingsScreen() {
   const insets = useSafeAreaInsets();
   const [reminders, setReminders] = useState<Reminder[]>([]);
   const [title, setTitle] = useState('');
